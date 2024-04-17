@@ -3,6 +3,10 @@ import loginSignupImage from "../assets/login-animation.gif";
 import { BiShow, BiHide } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { BsDatabaseDown } from "react-icons/bs";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { loginRedux } from "../redux/userSlice";
 export const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () => {
@@ -12,6 +16,12 @@ export const Login = () => {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
+
+  const userData = useSelector((state) => state);
+  // console.log(userData.user);
+
+  const dispatch = useDispatch();
   const handleOnchange = (e) => {
     const { name, value } = e.target;
     setData((preve) => {
@@ -34,6 +44,14 @@ export const Login = () => {
       });
       const dataRes = await fetchData.json();
       console.log(dataRes);
+      toast(dataRes.message);
+      if (dataRes.alert) {
+        dispatch(loginRedux(dataRes));
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
+      }
+      console.log(userData);
     } else {
       alert("Please fill all the fields");
     }
