@@ -63,6 +63,13 @@ app.post("/signup", async (req, res) => {
 
 app.post("/login", (req, res) => {
   console.log(req.body);
+  const { email } = req.body;
+  userModel.findOne({ email: email }, (err, result) => {
+    if (result) {
+      console.log(result);
+      res.send({ message: "Login is successfully", alert: true });
+    }
+  });
 });
 
 app.listen(port, () => console.log("Server is running at port :" + port));
