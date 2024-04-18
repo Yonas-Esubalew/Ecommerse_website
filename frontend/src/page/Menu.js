@@ -1,37 +1,56 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { AllProduct } from "../component/AllProduct";
+import { useDispatch } from "react-redux";
+import { addCartItem } from "../redux/productSlice";
 
 export const Menu = () => {
   const { filterby } = useParams();
+  const dispatch = useDispatch();
   const productData = useSelector((state) => state.product.productList);
-
-  const productDisplay = productData.filter((el) => el._id === filterby)[0];
+  const productDisplay = productData.filter((el) => el._id === filterby);
   console.log(productDisplay);
 
+  const handleAddCartProduct = (e) => {
+    dispatch(addCartItem(productDisplay));
+  };
+
   return (
-    <div>
-      <div className="p-2 md:p-4">
-        <div className="w-full max-w-4xl bg-slate-400 m-auto">
-          <div className="w-1/2 shadow overflow-hidden">
-            <img
-              src={productDisplay.image}
-              className="hover:scale-500 transition-all"
-            />
+    <div className="p-2 md:p-4">
+      <div className="w-full max-w-4xl m-auto md:flex bg-white">
+        <div className="max-w-lg overflow-hidden w-full p-5">
+          <img
+            src={productDisplay.image}
+            className="hover:scale-500 transition-all h-full"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <h3 className="font-semibold text-slate-600 capitalize text-2xl md:text-4xl">
+            {productDisplay.name}
+          </h3>
+          <p className=" text-slate-500 font-medium text-2xl">
+            {productDisplay.category}
+          </p>
+          <p className="font-bold md:text-2xl">
+            <span className="text-red-500">$</span>
+            <span>{productDisplay.price}</span>
+          </p>
+          <div className="gap-3 flex">
+            <button className="bg-yellow-500 py-1 mt-2 rounded hover:bg-yellow-600 min-w-[100px]">
+              Buy
+            </button>
+            <button onClick={handleAddCartProduct} className="bg-yellow-500 py-1 mt-2 rounded hover:bg-yellow-600 min-w-[100px]">
+              Add Cart
+            </button>
           </div>
-          <div className="">
-            <h3 className="font-semibold text-slate-600 capitalize text-lg my-4 whitespace-nowrap overflow-hidden">
-              {productDisplay.name}
-            </h3>
-            <p className=" text-slate-500 font-medium">
-              {productDisplay.category}
-            </p>
-            <p className="font-bold">
-              <span className="text-red-500">$</span>
-              <span>{productDisplay.price}</span>
+          <div>
+            <p className="text-slate-600 font-medium">
+              Description : {productDisplay.description}
             </p>
           </div>
         </div>
       </div>
+      <AllProduct heading={"related product"} />
     </div>
   );
 };
