@@ -22,7 +22,7 @@ export const Header = () => {
   };
   const cartItemNumber = useSelector((state) => state.product.cartItem);
   return (
-    <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50">
+    <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50 bg-white">
       {/* desktop */}
       <div className="flex items-center h-full justify-between">
         <Link to={""}>
@@ -46,12 +46,12 @@ export const Header = () => {
             <Link to={"cart"}>
               <BsCartFill />
               <div className="absolute -top-1 -right-1 text-white bg-red-500 h-4 w-4 rounded-full m-0 p-0 text-sm text-center">
-                {cartItemNumber}
+                {cartItemNumber.length}
               </div>
             </Link>
           </div>
-          <div className="text-2xl text-slate-600" onClick={handleShowMenu}>
-            <div className="text-3xl cursor-pointer h-10 w-10 rounded-full overflow-hidden drop-shadow">
+          <div className=" text-slate-600" onClick={handleShowMenu}>
+            <div className="text-3xl cursor-pointer h-8 w-8 rounded-full overflow-hidden drop-shadow-md">
               {userData.image ? (
                 <img src={userData.image} className="h-full w-full" />
               ) : (

@@ -31,9 +31,9 @@ export const Home = () => {
     <div className="p-2 md:p-4">
       <div className="md:flex gap-4 py-2">
         <div className="md:w-1/2">
-          <div className="flex gap-3 bg-slate-300 w-32 px-2 items-center rounded-full">
+          <div className="flex gap-3 bg-slate-300 w-36 px-2 items-center rounded-full">
             <p className="text-sm font-medium text-slate-900">Bike Delivery</p>
-            <img src={bike} className="h-2" />
+            <img src={bike} className="h-7" />
           </div>
           <h2 className="text-4xl font-bold md:text-7xl py-3">
             The Fasted Delivery in{" "}
@@ -73,7 +73,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="">
-        <div className="flex w-full">
+        <div className="flex w-full items-center">
           <h2 className="font-bold text-2xl text-slate-800 mb-4">
             Fresh Vagetables
           </h2>

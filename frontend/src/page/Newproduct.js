@@ -83,14 +83,23 @@ export const Newproduct = () => {
           value={data.category}
         >
           <option value={"other"}>select Category</option>
-          <option value={"fruits"}>Fruits</option>
+          <option value={"yellow butter cake"}>Yellow Butter Cake</option>
           <option value={"vegetable"}>Vegetables</option>
-          <option value={"icecream"}>Icecream</option>
+          <option value={"pound cake"}>Pound Cake</option>
           <option value={"dosa"}>Dosa</option>
-          <option value={"piza"}>Piza</option>
-          <option value={"rice"}>Rice</option>
-          <option value={"cake"}>Cake</option>
-          <option value={"burger"}>Burger</option>
+          <option value={"red velvet cake"}>Red Velvet Cake</option>
+          <option value={"carrot cake"}>Carrot Cake</option>
+          <option value={"sponge cake"}>Sponge Cake</option>
+          <option value={"genoise cake"}>Genoise Cake</option>
+          <option value={"chiffon cake"}>Chiffon Cake</option>
+          <option value={"angel food cake"}>Angel Food Cake</option>
+          <option value={"flourless cake"}>Flourless Cake</option>
+          <option value={"upside-down cake"}>Upside-Down Cake</option>
+          <option value={"devil's food cake"}>Devil's Food Cake</option>
+          <option value={"hummingbird cake"}>Hummingbird Cake</option>
+          <option value={"opera cake"}>Opera Cake</option>
+          <option value={"lady baltimore cake"}>Lady Baltimore Cake</option>
+          <option value={"fruit cake"}>Fruit Cake</option>
         </select>
         <label htmlFor="image">Image</label>
         <div className="h-40 w-full bg-slate-300 my-3 rounded flex items-center justify-center">
