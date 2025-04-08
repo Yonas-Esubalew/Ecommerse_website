@@ -31,7 +31,7 @@ const userSchema = mongoose.Schema({
 const userModel = mongoose.model("user", userSchema);
 
 
-const port = process.env.PORT || 8080;
+
 
 // __dirname workaround for ES module
 const __filename = fileURLToPath(import.meta.url);
@@ -118,5 +118,5 @@ app.get("/product", async (req, res) => {
   res.send(JSON.stringify(data));
 });
 
-
+const port = process.env.PORT || 8080;
 app.listen(port, () => console.log("Server is running at port :" + port));
