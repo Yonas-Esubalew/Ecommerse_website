@@ -9,10 +9,11 @@
     "frontend": "cd frontend && npm run dev",
     "backend": "nodemon backend/index.js",
     "dev": "cross-env NODE_ENV=development nodemon backend/index.js",
-    "build": "npm install && cd frontend && npm install && NODE_OPTIONS='--max_old_space_size=1024' npm run build",
+    "build": "cd frontend && npm install && npm run build",
     "start": "cd frontend && npm run build && cd .. && node backend/index.js"
+
   },
-  "type": "module",
+  
   "author": "Yonas Esubalew",
   "license": "ISC",
   "dependencies": {
