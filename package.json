@@ -9,8 +9,8 @@
     "frontend": "cd frontend && npm run dev",
     "backend": "nodemon backend/index.js",
     "dev": "cross-env NODE_ENV=development nodemon backend/index.js",
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd frontend && npm run build && cd .. && node backend/index.js"
+    "start": "cd frontend && npm run build && cd .. && node backend/index.js",
+    "build": "cd frontend && npm install && npm run build"
 
   },
   
