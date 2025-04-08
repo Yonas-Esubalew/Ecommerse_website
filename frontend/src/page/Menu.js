@@ -10,7 +10,6 @@ export const Menu = () => {
   const dispatch = useDispatch();
   const productData = useSelector((state) => state.product.productList);
   const productDisplay = productData.filter((el) => el._id === filterby)[0];
-
   const handleAddCartProduct = (e) => {
     dispatch(addCartItem(productDisplay));
   };
@@ -53,13 +52,12 @@ export const Menu = () => {
             </button>
           </div>
           <div>
-            <p className="text-slate-600 font-medium">
-              Description : {productDisplay.description}
-            </p>
+            <p className="text-slate-600 font-medium">Description :</p>
+            <p>{productDisplay.description}</p>
           </div>
         </div>
       </div>
-      <AllProduct heading={"related product"} />
+      <AllProduct heading={"Related Product"} />
     </div>
   );
 };

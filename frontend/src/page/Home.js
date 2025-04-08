@@ -13,7 +13,7 @@ export const Home = () => {
   console.log(productData);
   const homeProductCartList = productData.slice(0, 4);
   const homeProductCartListVegetables = productData.filter(
-    (el) => el.category === "vegetable",
+    (el) => el.category === "Special Cake",
     []
   );
   console.log(homeProductCartListVegetables);
@@ -36,16 +36,19 @@ export const Home = () => {
             <img src={bike} className="h-7" />
           </div>
           <h2 className="text-4xl font-bold md:text-7xl py-3">
-            The Fasted Delivery in{" "}
+            The Fasted Delivery Cake in{" "}
             <span className="text-red-600">Your Home</span>
           </h2>
           <p className="py-3 text-base">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            Indulge in the sweet delights of our cake delivery house services.
+            From decadent chocolate creations to light and fluffy confections,
+            we offer a delightful assortment of cakes delivered straight to your
+            doorstep. Whether you're celebrating a special occasion or simply
+            craving a treat, our expertly crafted cakes are baked with love and
+            care, using only the finest ingredients. With convenient online
+            ordering and swift delivery, satisfying your sweet tooth has never
+            been easier. Elevate any moment with a slice of happiness from our
+            cake delivery house.
           </p>
           <button className="font-bold bg-red-500 text-slate-200 px-4 py-2 rounded-md">
             Order now
@@ -75,7 +78,7 @@ export const Home = () => {
       <div className="">
         <div className="flex w-full items-center">
           <h2 className="font-bold text-2xl text-slate-800 mb-4">
-            Fresh Vagetables
+            Special Cake
           </h2>
           <div className="ml-auto flex gap-4">
             <button
@@ -100,7 +103,7 @@ export const Home = () => {
             ? homeProductCartListVegetables.map((el) => {
                 return (
                   <CardFeature
-                    key={el._id + "vegetable"}
+                    key={el._id + "Special Cake"}
                     id={el._id}
                     name={el.name}
                     category={el.category}

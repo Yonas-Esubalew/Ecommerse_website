@@ -1,7 +1,11 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv").config();
+import express from "express";
+import cors from 'cors'
+import mongoose from "mongoose";
+import dotenv from 'dotenv'
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -11,9 +15,7 @@ mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("connect to mongodb 👍"))
   .catch((err) => console.log(err));
-
 //schema
-
 const userSchema = mongoose.Schema({
   firstName: String,
   lastName: String,
@@ -25,15 +27,28 @@ const userSchema = mongoose.Schema({
   confirmPassword: String,
   image: String,
 });
-
 //user model
 const userModel = mongoose.model("user", userSchema);
+
+
 const port = process.env.PORT || 8080;
+
+// __dirname workaround for ES module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static frontend
+const buildPath = path.join(__dirname, '../frontend/build');
+app.use(express.static(buildPath));
+
+// Fallback to React's index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'));
+});
 
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
-
 app.post("/signup", async (req, res) => {
   try {
     const { email } = req.body;
@@ -51,9 +66,7 @@ app.post("/signup", async (req, res) => {
     res.status(500).send({ message: "Internal server error" });
   }
 });
-
 //login api
-
 app.post("/login", async (req, res) => {
   try {
     console.log(req.body);
@@ -84,9 +97,7 @@ app.post("/login", async (req, res) => {
     res.status(500).send({ message: "Internal server error" });
   }
 });
-
 //product section
-
 const SchemaProduct = mongoose.Schema({
   name: String,
   category: String,
@@ -94,21 +105,18 @@ const SchemaProduct = mongoose.Schema({
   price: String,
   description: String,
 });
-
 const productModel = mongoose.model("product", SchemaProduct);
-
 //save product in data
 app.post("/uploadProduct", async (req, res) => {
   console.log(req.body);
   const data = await productModel(req.body);
   const datasave = await data.save();
-
-  res.send({ message: "upload successfully" });
+  res.send({ message: "Upload Successfully" });
 });
-
 app.get("/product", async (req, res) => {
   const data = await productModel.find({});
   res.send(JSON.stringify(data));
 });
+
 
 app.listen(port, () => console.log("Server is running at port :" + port));

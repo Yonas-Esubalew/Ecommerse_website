@@ -10,7 +10,6 @@ export const Newproduct = () => {
     price: "",
     description: "",
   });
-
   const handleOnchange = (e) => {
     const { name, value } = e.target;
     setData((preve) => {
@@ -32,9 +31,7 @@ export const Newproduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(data);
-
     const { name, image, category, price } = data;
-
     if (name && image && category && price) {
       const fetchData = await fetch(`http://localhost:8080/uploadProduct`, {
         method: "POST",
@@ -46,7 +43,6 @@ export const Newproduct = () => {
       const fetchRes = await fetchData.json();
       console.log(fetchRes);
       toast(fetchRes.message);
-
       setData(() => {
         return {
           name: "",
@@ -60,7 +56,6 @@ export const Newproduct = () => {
       toast("Enter required Fields");
     }
   };
-
   return (
     <div className="p-4">
       <form
@@ -83,22 +78,16 @@ export const Newproduct = () => {
           value={data.category}
         >
           <option value={"other"}>select Category</option>
-          <option value={"yellow butter cake"}>Yellow Butter Cake</option>
-          <option value={"vegetable"}>Vegetables</option>
+          <option value={"yellow cake"}>Yellow Cake</option>
           <option value={"pound cake"}>Pound Cake</option>
-          <option value={"dosa"}>Dosa</option>
           <option value={"red velvet cake"}>Red Velvet Cake</option>
           <option value={"carrot cake"}>Carrot Cake</option>
           <option value={"sponge cake"}>Sponge Cake</option>
           <option value={"genoise cake"}>Genoise Cake</option>
           <option value={"chiffon cake"}>Chiffon Cake</option>
-          <option value={"angel food cake"}>Angel Food Cake</option>
+          <option value={"angel cake"}>Angel Cake</option>
           <option value={"flourless cake"}>Flourless Cake</option>
-          <option value={"upside-down cake"}>Upside-Down Cake</option>
-          <option value={"devil's food cake"}>Devil's Food Cake</option>
-          <option value={"hummingbird cake"}>Hummingbird Cake</option>
-          <option value={"opera cake"}>Opera Cake</option>
-          <option value={"lady baltimore cake"}>Lady Baltimore Cake</option>
+          <option value={"Special Cake"}>Special Cake</option>
           <option value={"fruit cake"}>Fruit Cake</option>
         </select>
         <label htmlFor="image">Image</label>
@@ -128,7 +117,6 @@ export const Newproduct = () => {
           onChange={handleOnchange}
           value={data.price}
         />
-
         <label htmlFor="description">Description</label>
         <textarea
           rows={3}
@@ -137,7 +125,6 @@ export const Newproduct = () => {
           onChange={handleOnchange}
           value={data.description}
         ></textarea>
-
         <button className="bg-red-500 hover:bg-red-600 text-white text-lg font-medium drop-shadow">
           Save
         </button>

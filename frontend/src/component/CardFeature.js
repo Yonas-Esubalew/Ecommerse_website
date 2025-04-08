@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { addCartItem ,increaseQty} from "../redux/productSlice";
 import { useDispatch } from "react-redux";
-
 export const CardFeature = ({
   image,
   name,
@@ -9,7 +8,6 @@ export const CardFeature = ({
   category,
   loading,
   id,
-  
 }) => {
   const dispatch = useDispatch();
   const handleAddCartProduct = (e) => {
@@ -45,7 +43,7 @@ export const CardFeature = ({
             </p>{" "}
           </Link>
           <button
-            className="bg-yellow-500 py-1 mt-2 rounded hover:bg-yellow-600 w-full"
+            className="bg-red-500 py-1 mt-2 rounded hover:bg-red-700 w-full text-white"
             onClick={handleAddCartProduct}
           >
             Add Cart

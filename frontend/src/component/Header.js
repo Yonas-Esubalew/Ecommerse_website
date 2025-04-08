@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo5.png";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { BsCartFill } from "react-icons/bs";
 import { useState } from "react";
@@ -7,7 +7,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { logoutRedux } from "../redux/userSlice";
 import { toast } from "react-hot-toast";
 import { addCartItem } from "../redux/productSlice";
-
 export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const userData = useSelector((state) => state.user);
@@ -26,7 +25,7 @@ export const Header = () => {
       {/* desktop */}
       <div className="flex items-center h-full justify-between">
         <Link to={""}>
-          <div className="h-10">
+          <div className="h-12">
             <img
               className="h-full"
               src={logo}
@@ -38,7 +37,7 @@ export const Header = () => {
         <div className="flex items-center gap-4 md:gap-7">
           <nav className=" gap-4 md:gap-6 text-base md:text-lg hidden md:flex">
             <Link to={""}>Home</Link>
-            <Link to={"menu/661f6649165b54cddb3dda10"}>Menu</Link>
+            <Link to={"menu/663f5c34682aed4bd1a1f735"}>Menu</Link>
             <Link to={"about"}>About</Link>
             <Link to={"contact"}>Contact</Link>
           </nav>
