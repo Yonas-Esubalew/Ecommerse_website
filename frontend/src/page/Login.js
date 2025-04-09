@@ -59,7 +59,7 @@ export const Login = () => {
     <div className="p-3 md:p-4">
       <div className="w-full max-w-sm bg-white m-auto flex flex-col p-4">
         <div className="w-20 overflow-hidden rounded-full drop-shadow-md shadow-md m-auto">
-          <img src={loginSignupImage} alt="image" className="w-full" />
+          <img src={loginSignupImage} alt="" className="w-full" />
         </div>
         <form className="w-full py-3 flex flex-col" onSubmit={handleSubmit}>
           <label htmlFor="email" className="mb-1">

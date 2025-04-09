@@ -93,7 +93,7 @@ export const Newproduct = () => {
         <label htmlFor="image">Image</label>
         <div className="h-40 w-full bg-slate-300 my-3 rounded flex items-center justify-center">
           {data.image ? (
-            <img src={data.image} alt="image" className="h-full" />
+            <img src={data.image} alt="" className="h-full" />
           ) : (
             <span className="text-5xl hover:cursor-pointer">
               <BsCloudUpload />

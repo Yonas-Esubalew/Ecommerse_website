@@ -15,7 +15,7 @@ function App() {
       console.log(resData);
       dispatch(setDataProduct(resData));
     })();
-  }, []);
+  }, [dispatch]);
 
   console.log(productData);
   return (

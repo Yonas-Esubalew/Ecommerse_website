@@ -19,7 +19,7 @@ export const CartProduct = ({
   return (
     <div className="bg-slate-200 p-2 flex gap-4 rounded border-2 border-slate-300">
       <div className="p-3 bg-white rounded overflow-hidden">
-        <img src={image} className="h-28 w-40 object-cover" />
+        <img src={image} alt="" className="h-28 w-40 object-cover" />
       </div>
       <div className="flex flex-col gap-2 w-full">
         <div className="flex justify-between">

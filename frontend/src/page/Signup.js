@@ -72,7 +72,7 @@ export const Signup = () => {
       <div className="w-full max-w-sm bg-white m-auto flex flex-col p-4">
         <div className="w-20 overflow-hidden rounded-full drop-shadow-md shadow-md m-auto relative cursor-pointer h-full">
           <img
-            src={data.image ? data.image : loginSignupImage} alt="image"
+            src={data.image ? data.image : loginSignupImage} alt=""
             className="w-full h-full"
           />
 
