@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import loginSignupImage from "../assets/login-animation.gif";
 import { BiShow, BiHide } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { BsDatabaseDown } from "react-icons/bs";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -60,7 +59,7 @@ export const Login = () => {
     <div className="p-3 md:p-4">
       <div className="w-full max-w-sm bg-white m-auto flex flex-col p-4">
         <div className="w-20 overflow-hidden rounded-full drop-shadow-md shadow-md m-auto">
-          <img src={loginSignupImage} className="w-full" />
+          <img src={loginSignupImage} alt="image" className="w-full" />
         </div>
         <form className="w-full py-3 flex flex-col" onSubmit={handleSubmit}>
           <label htmlFor="email" className="mb-1">

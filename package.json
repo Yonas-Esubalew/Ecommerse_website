@@ -11,7 +11,6 @@
     "dev": "cross-env NODE_ENV=development nodemon backend/index.js",
     "start": "cd frontend && npm run build && cd .. && node backend/index.js",
     "build": "cd frontend && npm install && npm run build"
-
   },
   
   "author": "Yonas Esubalew",

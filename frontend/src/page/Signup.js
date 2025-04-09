@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import loginSignupImage from "../assets/login-animation.gif";
 import { BiShow, BiHide } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
-import { BsDatabaseDown } from "react-icons/bs";
 import { ImagetoBase64 } from "../utility/ImageToBase64";
 import { toast } from "react-hot-toast";
 
@@ -73,7 +72,7 @@ export const Signup = () => {
       <div className="w-full max-w-sm bg-white m-auto flex flex-col p-4">
         <div className="w-20 overflow-hidden rounded-full drop-shadow-md shadow-md m-auto relative cursor-pointer h-full">
           <img
-            src={data.image ? data.image : loginSignupImage}
+            src={data.image ? data.image : loginSignupImage} alt="image"
             className="w-full h-full"
           />
 

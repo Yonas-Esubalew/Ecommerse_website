@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AiTwotoneAlert } from "react-icons/ai";
 import toast from "react-hot-toast";
 
 const initialState = {

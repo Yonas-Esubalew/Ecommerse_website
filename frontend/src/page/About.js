@@ -4,7 +4,7 @@ export const About = () => {
   return (
     <div className=" justify-center items-center text-center flex">
       <div className="w-full h-full">
-        <img src={img} className="w-full h-full rounded-full gap-8" />
+        <img src={img} alt="image" className="w-full h-full rounded-full gap-8" />
       </div>
       <div>
         <h2 className="text-4xl font-bold md:text-7xl py-3 gap-3">

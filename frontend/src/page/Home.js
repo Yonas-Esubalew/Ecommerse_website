@@ -3,9 +3,8 @@ import { HomeCard } from "../component/HomeCard";
 import { useSelector } from "react-redux";
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
-import { useEffect, useRef, useState } from "react";
+import {  useRef } from "react";
 import bike from "../assets/2972185.png";
-import { FilterProduct } from "../component/FilterProduct";
 import { AllProduct } from "../component/AllProduct";
 
 export const Home = () => {
@@ -33,7 +32,7 @@ export const Home = () => {
         <div className="md:w-1/2">
           <div className="flex gap-3 bg-slate-300 w-36 px-2 items-center rounded-full">
             <p className="text-sm font-medium text-slate-900">Bike Delivery</p>
-            <img src={bike} className="h-7" />
+            <img src={bike} alt="bike" className="h-7" />
           </div>
           <h2 className="text-4xl font-bold md:text-7xl py-3">
             The Fasted Delivery Cake in{" "}

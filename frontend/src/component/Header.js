@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { logoutRedux } from "../redux/userSlice";
 import { toast } from "react-hot-toast";
-import { addCartItem } from "../redux/productSlice";
+
 export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const userData = useSelector((state) => state.user);
@@ -29,7 +29,7 @@ export const Header = () => {
             <img
               className="h-full"
               src={logo}
-              alt="logo Image
+              alt="logo
             "
             ></img>
           </div>
@@ -52,7 +52,7 @@ export const Header = () => {
           <div className=" text-slate-600" onClick={handleShowMenu}>
             <div className="text-3xl cursor-pointer h-8 w-8 rounded-full overflow-hidden drop-shadow-md">
               {userData.image ? (
-                <img src={userData.image} className="h-full w-full" />
+                <img src={userData.image} alt="Username" className="h-full w-full" />
               ) : (
                 <HiOutlineUserCircle />
               )}

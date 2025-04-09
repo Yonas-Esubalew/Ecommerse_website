@@ -8,7 +8,7 @@ export const Contact = () => {
       </div>
       <div className="w-full max-w-sm bg-white m-auto flex flex-col p-4">
         <div className="w-38 overflow-hidden drop-shadow-md shadow-md m-auto">
-          <img src="" className="w-full" />
+          <img src="" alt="image" className="w-full" />
         </div>
         <form className="w-full py-3 flex flex-col">
           <label htmlFor="email" className="mb-1">
