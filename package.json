@@ -8,9 +8,9 @@
     "install-all": "npm install && cd frontend && npm install",
     "frontend": "cd frontend && npm run dev",
     "backend": "nodemon backend/index.js",
-    "dev": "cross-env NODE_ENV=development nodemon backend/index.js",
+    "dev": "cross-env NODE_ENV=--omit=dev nodemon backend/index.js",
     "start": "cd frontend && npm run build && cd .. && node backend/index.js",
-    "build": "cd frontend && npm install && npm run build"
+    "build": "cd frontend && npm install --omit=dev && npm run build"
   },
   
   "author": "Yonas Esubalew",
