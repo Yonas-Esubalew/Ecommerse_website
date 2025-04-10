@@ -10,7 +10,7 @@
     "backend": "nodemon backend/index.js",
     "dev": "cross-env NODE_ENV=--omit=dev nodemon backend/index.js",
     "start": "node backend/index.js",
-    "build": "cd frontend && npm install --omit=dev && npm run build"
+    "build": "npm run build"
   },
   
   "author": "Yonas Esubalew",
