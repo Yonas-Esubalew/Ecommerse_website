@@ -7,8 +7,7 @@
     "start": "node backend/index.js",
     "dev": "nodemon backend/index.js",
     "install-all": "npm install && cd frontend && npm install",
-    "frontend": "cd frontend && npm run dev",
-    "build": "npm run build"
+   
   
   },
   "author": "Yonas Esubalew",
