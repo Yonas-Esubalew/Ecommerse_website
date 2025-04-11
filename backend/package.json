@@ -4,15 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install-all": "npm install && cd frontend && npm install",
-    "frontend": "cd frontend && npm run dev",
-    "backend": "nodemon backend/index.js",
-    "dev": "cross-env NODE_ENV=--omit=dev nodemon backend/index.js",
     "start": "node backend/index.js",
-    "build": "npm install && npm run build"
+    "dev": "nodemon backend/index.js",
+    "install-all": "npm install && cd frontend && npm install",
+    "frontend": "cd frontend && npm run dev"
   },
-  
   "author": "Yonas Esubalew",
   "license": "ISC",
   "dependencies": {
