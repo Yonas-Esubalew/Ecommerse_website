@@ -6,9 +6,7 @@
   "scripts": {
     "start": "node backend/index.js",
     "dev": "nodemon backend/index.js",
-    "install-all": "npm install && cd frontend && npm install",
-   
-  
+    "install-all": "npm install && cd frontend && npm install"
   },
   "author": "Yonas Esubalew",
   "license": "ISC",
