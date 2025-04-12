@@ -52,7 +52,7 @@ git clone https://github.com/Yonas-Esubalew/mern-ecommerce-cake-shop.git
 cd mern-ecommerce-cake-shop
 2. Install DependenciesbashCopy
 
-### Backend
+#### Backend
 cd backend
 npm install
 
@@ -67,13 +67,13 @@ JWT_SECRET=your_jwt_secret
 STRIPE_SECRET=your_stripe_secret_key
 ✅ Replace these values with your actual secure credentials. 🔐 Important: Do NOT commit .env to GitHub — it’s in .gitignore for security.
 
-#### Running the App Locally
+### Running the App Locally
 
-# Start backend
+#### Start backend
 cd backend
 npm run dev
 
-# Start frontend
+#### Start frontend
 cd ../frontend
 npm run dev
 Now go to http://localhost:3000 to browse the frontend. The backend should be running on http://localhost:5000.
@@ -104,26 +104,6 @@ Set your start script in package.json:
 "start": "node server.js"
 Deploy and get your backend domain like: https://your-backend.up.railway.app
 
-### 🗂 File Structure
-
-mern-ecommerce-cake-shop/
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── config/
-│   └── server.js
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── redux/
-│   │   ├── App.js
-│   │   └── index.js
-├── README.md
-├── .gitignore
-📦 Usage
-
 Register or log in as a user.
 Browse and add cakes to your cart.
 Checkout using Stripe (test cards in dev).
@@ -133,17 +113,17 @@ Admins can manage cakes and orders from admin panel.
 ### 💡 Contribution Guide
 Contributions are welcome! To contribute:
 
-# Fork the repo
-# Create your branch
+#### Fork the repo
+#### Create your branch
 git checkout -b feature/your-feature
 
-# Commit your changes
+#### Commit your changes
 git commit -m "Add: Your feature"
 
-# Push to GitHub
+#### Push to GitHub
 git push origin feature/your-feature
 
-# Open a Pull Request
+#### Open a Pull Request
 🧠 Acknowledgements
 React
 
@@ -153,10 +133,10 @@ Stripe
 Vercel
 Railway
 
-### **👤 Author
+#### **👤 Author
 Yonas Esubalew
 📧 Email: yonasatwork999@gmail.com
-🌐 GitHub: https://github.com/Yonas-Esubalew
+🌐 Website: https://yonas-esubalew.vercel.app
 
-## 🔗 Live Demo
-🚀 https://ecommerse-website-8xfg.vercel.app**
+#### 🔗 Live Demo
+🚀 https://ecommerse-website-8xfg.vercel.app
