@@ -1,56 +1,90 @@
+
 # 🎂 MERN Ecommerce Cake Shop
 
-An elegant and fully responsive online cake shopping website built with the MERN stack (MongoDB, Express.js, React.js, and Node.js). This project allows users to browse, order, and manage cakes with ease, complete with admin features and secure payment integration.
+![Homepage Banner](https://ecommerse-website-8xfg.vercel.app/homepage-banner.jpg) <!-- Replace with your real banner image if available -->
 
-![Homepage](https://ecommerse-website-8xfg.vercel.app/homepage-banner.jpg)
+An elegant and modern **online cake shop** built using the **MERN stack** (MongoDB, Express.js, React, and Node.js). This platform allows users to browse delicious cakes, add them to their cart, checkout with secure payment, and track orders — all from a beautiful and responsive UI.
 
-**Live Demo**  
-https://ecommerse-website-8xfg.vercel.app
+🔗 **Live Demo**: [https://ecommerse-website-8xfg.vercel.app](https://ecommerse-website-8xfg.vercel.app)
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-User authentication using JSON Web Tokens for secure login and registration.  
-Admin dashboard for managing cake products and orders.  
-Shopping cart with dynamic quantity updates and local state persistence.  
-Stripe API integrated for secure online payments.  
-Order management system with status tracking and order history.  
-Search and filter functionality for quick product discovery.  
-Fully responsive design optimized for desktop and mobile.  
-Simple and intuitive UI for better customer experience.
+- 🔐 User Authentication (JWT-based)
+- 🛍️ Cake Management (Admin can create, edit, delete)
+- 🛒 Cart System with Quantity Updates
+- 💳 Stripe Payment Integration
+- 📦 Order Tracking & History
+- 🔍 Search and Filter by Category or Keyword
+- 🌙 Dark Mode Ready (optional)
+- 📱 Fully Responsive (Mobile & Desktop)
+- 🧑‍🍳 Built with Real Cake Shop UX in Mind
 
 ---
 
 ## 🧰 Tech Stack
 
-**Frontend**  
-React.js for building the user interface  
-React Router for navigation  
-Redux Toolkit for global state management  
-Tailwind CSS and Material UI for styling and UI components
+### Frontend
+- React.js
+- Redux Toolkit
+- React Router
+- Tailwind CSS 
 
-**Backend**  
-Node.js and Express.js to build REST APIs  
-MongoDB with Mongoose for the database layer  
-Stripe for secure payment processing  
-JWT for authentication  
-bcrypt.js for password hashing  
-dotenv for managing environment variables  
-nodemon for backend development convenience
+### Backend
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- Stripe API
 
----
+### Additional Tools
+- JSON Web Token (JWT)
+- bcrypt.js
+- dotenv
+- nodemon
 
-## 🚀 Getting Started
+#### Clone the Repository
+
+```bash
+git clone https://github.com/Yonas-Esubalew/mern-ecommerce-cake-shop.git
+cd mern-ecommerce-cake-shop
+
+
+#### 🚀 Getting Started
 
 Clone the project repository using Git.  
 Navigate into the project folder and install dependencies for both backend and frontend using `npm install`.  
 Create a `.env` file inside the `backend` directory to hold environment variables including your MongoDB URI, JWT secret, and Stripe secret.  
 Start the backend server using `npm run dev`.  
 Start the frontend server using `npm run dev` or `npm start`.  
-Access the application at `http://localhost:3000`.
+Access the application at `http://localhost:8080`.
 
----
+Install Dependencies
+# Backend
+cd backend
+npm install
+
+# Frontend
+cd ../frontend
+npm install
+
+Environment Variables
+Create a .env file in the backend directory:
+
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET=your_stripe_secret_key
+✅ Replace these values with your actual secure credentials. 🔐 Important: Do NOT commit .env to GitHub — it’s in .gitignore for security.
+
+Running the App Locally
+
+# Start backend
+cd backend
+npm run dev
+
+# Start frontend
+cd ../frontend
+npm run dev
 
 ## 🌐 Deployment
 
@@ -63,8 +97,6 @@ Backend is deployed using Railway. Push the backend code to GitHub and connect i
 ## ⚙️ Environment Variables
 
 Create a `.env` file in the backend folder with the following keys
-
-MONGO_URI=your_mongodb_connection_string JWT_SECRET=your_jwt_secret_key STRIPE_SECRET=your_stripe_secret_key
 
 Never expose this file. It's already included in `.gitignore`.
 For frontend on Vercel, define the following environment variable:
@@ -116,7 +148,7 @@ Vercel - https://vercel.com
 
 **Yonas Esubalew**  
 Email: yonasatwork999@gmail.com  
-Website: [https://github.com/Yonas-Esubalew](https://github.com/Yonas-Esubalew)
+Website: [https://yonas-esubalew.vercel.app](https://yonas-esubalew.vercel.app)
 
 ---
 
