@@ -1,7 +1,7 @@
 
 # 🎂 MERN Ecommerce Cake Shop
 
-[![Homepage Banner](https://github.com/Yonas-Esubalew/Ecommerse_website/blob/main/image_original%20(3).jpg?raw=true)](https://ecommerse-website-8xfg.vercel.app)
+[![Homepage Screenshot](https://github.com/Yonas-Esubalew/Ecommerse_website/blob/main/Screenshot%202025-04-11%20221020.png?raw=true)](https://ecommerse-website-8xfg.vercel.app)
 
 
 An elegant and modern **online cake shop** built using the **MERN stack** (MongoDB, Express.js, React, and Node.js). This platform allows users to browse delicious cakes, add them to their cart, checkout with secure payment, and track orders — all from a beautiful and responsive UI.
@@ -51,109 +51,105 @@ git clone https://github.com/Yonas-Esubalew/mern-ecommerce-cake-shop.git
 cd mern-ecommerce-cake-shop
 
 
-#### 🚀 Getting Started
+Getting Started
 
-Clone the project repository using Git.  
-Navigate into the project folder and install dependencies for both backend and frontend using `npm install`.  
-Create a `.env` file inside the `backend` directory to hold environment variables including your MongoDB URI, JWT secret, and Stripe secret.  
-Start the backend server using `npm run dev`.  
-Start the frontend server using `npm run dev` or `npm start`.  
-Access the application at `http://localhost:8080`.
+Clone the project repository using Git.
+Navigate into the project folder and install dependencies for both backend and frontend using npm install.
+Create a .env file inside the backend directory to hold environment variables including your MongoDB URI, JWT secret, and Stripe secret.
+Start the backend server using npm run dev.
+Start the frontend server using npm run dev or npm start.
+Access the application at http://localhost:8080.
 
 Install Dependencies
-# Backend
-cd backend
-npm install
 
-# Frontend
-cd ../frontend
-npm install
+Backend:
+Navigate to the backend folder
+Run: npm install
+
+Frontend:
+Navigate to the frontend folder
+Run: npm install
 
 Environment Variables
-Create a .env file in the backend directory:
 
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-STRIPE_SECRET=your_stripe_secret_key
-✅ Replace these values with your actual secure credentials. 🔐 Important: Do NOT commit .env to GitHub — it’s in .gitignore for security.
+Create a .env file in the backend directory with the following keys:
+
+MONGO_URI = your_mongodb_connection_string
+JWT_SECRET = your_jwt_secret
+STRIPE_SECRET = your_stripe_secret_key
+
+Replace these values with your actual secure credentials.
+Important: Do NOT commit your .env file to GitHub — it’s ignored automatically for security.
 
 Running the App Locally
 
-# Start backend
-cd backend
-npm run dev
+Start backend:
+Navigate to backend
+Run: npm run dev
 
-# Start frontend
-cd ../frontend
-npm run dev
+Start frontend:
+Navigate to frontend
+Run: npm run dev
 
-## 🌐 Deployment
+🌐 Deployment
 
-Frontend is deployed on Vercel. During deployment, ensure that environment variables are added with a `CRA_` prefix (e.g., `REACT_APP_API_URL`) to work properly with Vite or Create React App.
+Frontend is deployed on Vercel.
+During deployment, make sure to add required environment variables in Vercel’s dashboard.
+Use the REACT_APP_ prefix for Create React App or VITE_ prefix for Vite (example: REACT_APP_API_URL or VITE_API_URL).
+This ensures the frontend connects correctly to your backend.
 
-Backend is deployed using Railway. Push the backend code to GitHub and connect it with Railway. Set environment variables such as `MONGO_URI`, `JWT_SECRET`, and `STRIPE_SECRET` in the Railway dashboard. Railway auto-detects and deploys Node.js apps. Ensure the backend has the correct start script like `"start": "node server.js"`.
+Backend is deployed using Railway.
+Push your backend code to GitHub and connect the repo with Railway.
+Set environment variables (MONGO_URI, JWT_SECRET, STRIPE_SECRET) via the Railway UI.
+Railway will auto-detect and deploy your Node.js app.
+Make sure your backend package.json contains the correct start script like:
+"start": "node server.js"
 
----
+This file is ignored by Git, so it stays private.
+For frontend, define this environment variable on Vercel:
+REACT_APP_API_URL = https://backend.up.railway.app
+This makes sure frontend API calls route correctly to the live backend.
 
-## ⚙️ Environment Variables
+💡 Usage
 
-Create a `.env` file in the backend folder with the following keys
+Register or log in as a user to access the cake store
+Browse cakes by category or keyword
+Add products to your cart
+Checkout securely using Stripe
+View past orders and track statuses
+Admins can manage cakes, users, and orders from the admin panel
 
-Never expose this file. It's already included in `.gitignore`.
-For frontend on Vercel, define the following environment variable:
-REACT_APP_API_URL=https://backend.up.railway.app
+🛠 Customization
 
-This will make sure API requests are routed to your deployed backend.
+Replace product images in the frontend
+Update site text or UI easily using TailwindCSS classes
+Add features to the admin dashboard, such as charts or sales analytics
+Use a translation library (like react-i18next) to support multiple languages
 
----
+🤝 Contributing
 
-## 💡 Usage
+Fork the repo
+Create a feature branch
+Commit your changes
+Push to your fork
+Open a pull request
+All contributions are welcome and appreciated!
 
-Register or log in as a user to access the store.  
-Browse cakes by category or keyword.  
-Add products to cart and proceed to checkout using Stripe.  
-View past orders and order details from the profile section.  
-Admins can access the admin panel to manage cakes and orders.
+📢 Acknowledgements
 
----
+React – https://reactjs.org
+Express – https://expressjs.com
+MongoDB – https://www.mongodb.com
+Stripe – https://stripe.com
+Railway – https://railway.app
+Vercel – https://vercel.com
 
-## 🛠 Customization
+👨‍💻 Author
 
-You can replace product images, update text content, or change the theme using Tailwind utility classes.  
-Easily integrate new payment methods or enhance the admin dashboard with analytics.  
-To localize or translate the app, use a library like `react-i18next`.
+Yonas Esubalew
+Email: yonasatwork999@gmail.com
+Website: https://yonas-esubalew.vercel.app
 
----
+🌍 Demo
 
-## 🤝 Contributing
-
-Fork the repository and create a new feature branch.  
-Make your changes and commit them with a clear message.  
-Push your branch to GitHub and open a Pull Request.  
-All contributions are appreciated and reviewed promptly.
-
----
-
-## 📢 Acknowledgements
-
-React - https://reactjs.org  
-Express - https://expressjs.com  
-MongoDB - https://www.mongodb.com  
-Stripe - https://stripe.com  
-Railway - https://railway.app  
-Vercel - https://vercel.com
-
----
-
-## 👨‍💻 Author
-
-**Yonas Esubalew**  
-Email: yonasatwork999@gmail.com  
-Website: [https://yonas-esubalew.vercel.app](https://yonas-esubalew.vercel.app)
-
----
-
-## 🌍 Demo
-
-Try the live demo here:  
-https://ecommerse-website-8xfg.vercel.app
+Live site: https://ecommerse-website-8xfg.vercel.app
