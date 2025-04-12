@@ -8,7 +8,11 @@ import { fileURLToPath } from 'url';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://ecommerse-website-8xfg.vercel.app/", // your Vercel domain here
+  credentials: true, // if using cookies/auth
+}));
+
 app.use(express.json());
 //mongodb connection
 mongoose
@@ -29,9 +33,6 @@ const userSchema = mongoose.Schema({
 });
 //user model
 const userModel = mongoose.model("user", userSchema);
-
-
-
 
 // __dirname workaround for ES module
 const __filename = fileURLToPath(import.meta.url);
