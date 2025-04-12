@@ -45,23 +45,21 @@ An elegant and modern **online cake shop** built using the **MERN stack** (Mongo
 
 ---
 
-## 🖥️ Installation & Setup
 
-### 1. Clone the Repository
+### Clone the Repository
 
-```bash
 git clone https://github.com/Yonas-Esubalew/mern-ecommerce-cake-shop.git
 cd mern-ecommerce-cake-shop
 2. Install DependenciesbashCopy
 
-# Backend
+### Backend
 cd backend
 npm install
 
-# Frontend
+#### Frontend
 cd ../frontend
 npm install
-3. Environment Variables
+#### Environment Variables
 Create a .env file in the backend directory:
 
 MONGO_URI=your_mongodb_connection_string
@@ -69,7 +67,7 @@ JWT_SECRET=your_jwt_secret
 STRIPE_SECRET=your_stripe_secret_key
 ✅ Replace these values with your actual secure credentials. 🔐 Important: Do NOT commit .env to GitHub — it’s in .gitignore for security.
 
-4. Running the App Locally
+#### Running the App Locally
 
 # Start backend
 cd backend
@@ -80,12 +78,12 @@ cd ../frontend
 npm run dev
 Now go to http://localhost:3000 to browse the frontend. The backend should be running on http://localhost:5000.
 
-🌍 Deployment
+### 🌍 Deployment
 Frontend (on Vercel)
 Push your frontend code to GitHub.
 Go to https://vercel.com and import your frontend repo.
 
-During deployment:
+### During deployment:
 
 Set VITE_API_URL=https://your-backend-service.up.railway.app in Environment Variables.
 Deploy and you’ll get a .vercel.app domain.
@@ -96,8 +94,7 @@ Go to https://railway.app.
 
 Create a new project and link your backend GitHub repo.
 
-Add environment variables:
-
+### environment variables:
 
 MONGO_URI=your mongodb key
 JWT_SECRET=your secret key
@@ -107,7 +104,7 @@ Set your start script in package.json:
 "start": "node server.js"
 Deploy and get your backend domain like: https://your-backend.up.railway.app
 
-🗂 File Structure
+### 🗂 File Structure
 
 mern-ecommerce-cake-shop/
 ├── backend/
@@ -126,15 +123,14 @@ mern-ecommerce-cake-shop/
 ├── README.md
 ├── .gitignore
 📦 Usage
+
 Register or log in as a user.
-
 Browse and add cakes to your cart.
-
 Checkout using Stripe (test cards in dev).
 View your past orders in your profile.
 Admins can manage cakes and orders from admin panel.
 
-💡 Contribution Guide
+### 💡 Contribution Guide
 Contributions are welcome! To contribute:
 
 # Fork the repo
@@ -157,10 +153,10 @@ Stripe
 Vercel
 Railway
 
-**👤 Author
+### **👤 Author
 Yonas Esubalew
 📧 Email: yonasatwork999@gmail.com
 🌐 GitHub: https://github.com/Yonas-Esubalew
 
-🔗 Live Demo
+## 🔗 Live Demo
 🚀 https://ecommerse-website-8xfg.vercel.app**
