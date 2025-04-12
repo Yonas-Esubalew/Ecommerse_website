@@ -1,138 +1,136 @@
-# MERN Ecommerce Cake Shop
+# 🎂 MERN Ecommerce Cake Shop
 
-An **online cake shopping website** built with the MERN stack (MongoDB, Express.js, React.js, and Node.js). This application allows users to browse, order, and manage their favorite cakes effortlessly.
+[![Homepage Screenshot](https://github.com/Yonas-Esubalew/Ecommerse_website/blob/main/Screenshot%202025-04-11%20221020.png?raw=true)](https://ecommerse-website-8xfg.vercel.app)
 
----
 
-## Features
+An elegant and modern **online cake shop** built using the **MERN stack** (MongoDB, Express.js, React, and Node.js). This platform allows users to browse delicious cakes, add them to their cart, checkout with secure payment, and track orders — all from a beautiful and responsive UI.
 
-- **User Authentication**: Register and log in securely with JSON Web Tokens (JWT).
-- **Product Management**: Add, edit, and delete cakes (admin feature).
-- **Shopping Cart**: Add cakes to your cart and manage quantities easily.
-- **Order Management**: View order history and track the status of current orders.
-- **Responsive Design**: Optimized for both desktop and mobile platforms.
-- **Payment Integration**: Checkout with secure online payments.
-- **Search and Filter**: Quickly find cakes by categories or keywords.
+🔗 **Live Demo**: [https://ecommerse-website-8xfg.vercel.app](https://ecommerse-website-8xfg.vercel.app)
 
 ---
 
-## Tech Stack
+## 🚀 Features
+
+- 🔐 User Authentication (JWT-based)
+- 🛍️ Cake Management (Admin can create, edit, delete)
+- 🛒 Cart System with Quantity Updates
+- 💳 Stripe Payment Integration
+- 📦 Order Tracking & History
+- 🔍 Search and Filter by Category or Keyword
+- 🌙 Dark Mode Ready (optional)
+- 📱 Fully Responsive (Mobile & Desktop)
+- 🧑‍🍳 Built with Real Cake Shop UX in Mind
+
+---
+
+## 🧰 Tech Stack
 
 ### Frontend
 - React.js
+- Redux Toolkit
 - React Router
-- Redux Toolkit (for state management)
-- TailwindCSS / Material-UI (for styling)
+- Tailwind CSS / Material UI
 
 ### Backend
 - Node.js
 - Express.js
-- MongoDB (with Mongoose ORM)
-- Stripe API (for payment processing)
+- MongoDB with Mongoose
+- Stripe API
 
 ### Additional Tools
-- JWT (for authentication)
-- bcrypt.js (for password hashing)
-- dotenv (for environment variables)
+- JSON Web Token (JWT)
+- bcrypt.js
+- dotenv
+- nodemon
 
 ---
 
-## Installation
 
-### Prerequisites
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- [MongoDB](https://www.mongodb.com/)
+### Clone the Repository
 
-### Steps
+git clone [https://github.com/Yonas-Esubalew/ecommerce-website.git](https://github.com/Yonas-Esubalew/Ecommerse_website.git)
+cd ecommerce-website
+2. Install DependenciesbashCopy
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/mern-ecommerce-cake-shop.git
-   cd mern-ecommerce-cake-shop
-   ```
+#### Backend
+cd backend
+npm install
 
-2. Install dependencies for both the frontend and backend:
-   ```bash
-   cd backend
-   npm install
-   cd ../frontend
-   npm install
-   ```
+#### Frontend
+-cd ../frontend
+-npm install
+#### Environment Variables
+Create a .env file in the backend directory:
 
-3. Set up environment variables:
-   - Create a `.env` file in the `backend` directory with the following keys:
-     ```env
-     MONGO_URI= mongodb+srv://yonasbe999:5axyN975FWJXshdR@cluster0.3p96jr8.mongodb.net/Ecommerse_App?retryWrites=true&w=majority&appName=Cluster0
-     JWT_SECRET= 5axyN975FWJXshdR
-     STRIPE_SECRET=yonasbe999
-     ```
+-MONGO_URI=your_mongodb_connection_string
+-JWT_SECRET=your_jwt_secret
+-STRIPE_SECRET=your_stripe_secret_key
+-✅ Replace these values with your actual secure credentials.
+-🔐 Important: Do NOT commit .env to GitHub — it’s in .gitignore for security.
 
-4. Start the development servers:
-   - Backend:
-     ```bash
-     cd backend
-     npm run dev
-     ```
-   - Frontend:
-     ```bash
-     cd frontend
-     npm start
-     ```
+### Running the App Locally
 
-5. Open your browser and visit: `http://localhost:3000`.
+#### Start backend
+-cd backend
+-npm run dev
 
----
+#### Start frontend
+-cd ../frontend
+-npm run dev
+-Now go to http://localhost:3000 to browse the frontend. The backend should be running on http://localhost:8080.
 
-## File Structure
+### 🌍 Deployment
+-Frontend (on Vercel)
+-Push your frontend code to GitHub.
+-Go to https://vercel.com and import your frontend repo.
 
-```
-mern-ecommerce-cake-shop/
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   └── config/
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── redux/
-│   │   ├── App.js
-│   │   └── index.js
-├── README.md
-└── .gitignore
-```
+### During deployment:
 
----
+-Set REACT_APP_API_URL=https://your-backend-service.up.railway.app in Environment Variables.
+-Deploy and you’ll get a .vercel.app domain.
+-(Optional) Customize the domain in Vercel → Settings → Domains.
 
-## Usage
+Backend (on Railway)
+Go to https://railway.app.
 
-- Register or log in to access the platform.
-- Browse cakes by category or use the search bar.
-- Add items to your shopping cart and proceed to checkout.
-- View your order history and manage your account details.
+Create a new project and link your backend GitHub repo.
 
-## Contributing
+"start": "node server.js"
+Deploy and get your backend domain like: https://your-backend.up.railway.app
 
-Contributions are welcome! If you have suggestions or want to improve the project, feel free to:
+Register or log in as a user.
+Browse and add cakes to your cart.
+Checkout using Stripe (test cards in dev).
+View your past orders in your profile.
+Admins can manage cakes and orders from admin panel.
 
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m 'Add some feature'`.
-4. Push to the branch: `git push origin feature-name`.
-5. Open a pull request.
+### 💡 Contribution Guide
+Contributions are welcome! To contribute:
 
-## Acknowledgements
+#### Fork the repo
+#### Create your branch
+git checkout -b feature/your-feature
 
-- [React Documentation](https://reactjs.org/docs/getting-started.html)
-- [Stripe API Documentation](https://stripe.com/docs/api)
-- [MongoDB Documentation](https://www.mongodb.com/docs/)
+#### Commit your changes
+git commit -m "Add: Your feature"
 
----
+#### Push to GitHub
+git push origin feature/your-feature
 
-## Contact
+#### Open a Pull Request
+🧠 Acknowledgements
+React
 
-- **Author**: [Yonas Esubalew](https://github.com/Yonas-Esubalew)
-- **Email**: yonasatwork999@gmail.com
+-MongoDB
+-Express
+-Stripe
+-Vercel
+-Railway
+
+#### **👤 Author
+Yonas Esubalew
+-📧 Email: yonasatwork999@gmail.com
+-🌐 Website: https://yonas-esubalew.vercel.app
+
+#### 🔗 Live Demo
+🚀 https://ecommerse-website-8xfg.vercel.app
