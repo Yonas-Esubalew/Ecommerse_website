@@ -52,10 +52,8 @@ An elegant and modern **online cake shop** built using the **MERN stack** (Mongo
 ```bash
 git clone https://github.com/Yonas-Esubalew/mern-ecommerce-cake-shop.git
 cd mern-ecommerce-cake-shop
-2. Install Dependencies
-bash
-Copy
-Edit
+2. Install DependenciesbashCopy
+
 # Backend
 cd backend
 npm install
@@ -66,18 +64,13 @@ npm install
 3. Environment Variables
 Create a .env file in the backend directory:
 
-env
-Copy
-Edit
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 STRIPE_SECRET=your_stripe_secret_key
 ✅ Replace these values with your actual secure credentials. 🔐 Important: Do NOT commit .env to GitHub — it’s in .gitignore for security.
 
 4. Running the App Locally
-bash
-Copy
-Edit
+
 # Start backend
 cd backend
 npm run dev
@@ -105,24 +98,17 @@ Create a new project and link your backend GitHub repo.
 
 Add environment variables:
 
-env
-Copy
-Edit
+
 MONGO_URI=your mongodb key
 JWT_SECRET=your secret key
 STRIPE_SECRET= your stripe secret key
 Set your start script in package.json:
 
-json
-Copy
-Edit
 "start": "node server.js"
 Deploy and get your backend domain like: https://your-backend.up.railway.app
 
 🗂 File Structure
-pgsql
-Copy
-Edit
+
 mern-ecommerce-cake-shop/
 ├── backend/
 │   ├── controllers/
@@ -151,9 +137,6 @@ Admins can manage cakes and orders from admin panel.
 💡 Contribution Guide
 Contributions are welcome! To contribute:
 
-bash
-Copy
-Edit
 # Fork the repo
 # Create your branch
 git checkout -b feature/your-feature
@@ -174,10 +157,10 @@ Stripe
 Vercel
 Railway
 
-👤 Author
+**👤 Author
 Yonas Esubalew
 📧 Email: yonasatwork999@gmail.com
 🌐 GitHub: https://github.com/Yonas-Esubalew
 
 🔗 Live Demo
-🚀 https://ecommerse-website-8xfg.vercel.app
+🚀 https://ecommerse-website-8xfg.vercel.app**
