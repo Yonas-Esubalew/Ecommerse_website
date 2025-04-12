@@ -1,7 +1,7 @@
 
 # 🎂 MERN Ecommerce Cake Shop
 
-![Homepage Banner](https://ecommerse-website-8xfg.vercel.app/homepage-banner.jpg) <!-- Replace with your real banner image if available -->
+![Homepage Banner]([https://ecommerse-website-8xfg.vercel.app/homepage-banner.jpg](https://github.com/Yonas-Esubalew/Ecommerse_website/blob/main/image_original%20(3).jpg?raw=true)) <!-- Replace with your real banner image if available -->
 
 An elegant and modern **online cake shop** built using the **MERN stack** (MongoDB, Express.js, React, and Node.js). This platform allows users to browse delicious cakes, add them to their cart, checkout with secure payment, and track orders — all from a beautiful and responsive UI.
 
