@@ -48,7 +48,7 @@ An elegant and modern **online cake shop** built using the **MERN stack** (Mongo
 
 ### Clone the Repository
 
-git clone https://github.com/Yonas-Esubalew/ecommerce-website.git
+git clone [https://github.com/Yonas-Esubalew/ecommerce-website.git](https://github.com/Yonas-Esubalew/Ecommerse_website.git)
 cd ecommerce-website
 2. Install DependenciesbashCopy
 
