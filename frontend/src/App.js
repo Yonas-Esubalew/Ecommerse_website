@@ -9,24 +9,23 @@ import { useDispatch, useSelector } from "react-redux";
 function App() {
   const dispatch = useDispatch();
   const productData = useSelector((state) => state.product);
-  useEffect(() => {
+ useEffect(() => {
     (async () => {
       try {
         const res = await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/product`);
-        const contentType = res.headers.get("content-type");
-  
-        if (!contentType || !contentType.includes("application/json")) {
-          throw new Error("Response is not JSON");
+        if (!res.ok) {
+          throw new Error(`Fetch failed: ${res.status}`);
         }
   
         const resData = await res.json();
         console.log(resData);
         dispatch(setDataProduct(resData));
-      } catch (error) {
-        console.error("Failed to fetch product data:", error.message);
+      } catch (err) {
+        console.error("❌ Failed to fetch product data:", err.message);
       }
     })();
   }, [dispatch]);
+  
   
   console.log(productData);
   return (

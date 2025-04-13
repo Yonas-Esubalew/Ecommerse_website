@@ -47,11 +47,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
-// });
-
-
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
@@ -117,8 +112,6 @@ const SchemaProduct = mongoose.Schema({
   price: String,
   description: String,
 });
-
-
 
 const productModel = mongoose.model("product", SchemaProduct);
 //save product in data
