@@ -13,12 +13,16 @@ app.use(cors({
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
+
+
 app.use(express.json());
 //mongodb connection
 mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("connect to mongodb 👍"))
   .catch((err) => console.log(err));
+
+  
 //schema
 const userSchema = mongoose.Schema({
   firstName: String,
@@ -35,8 +39,6 @@ const userSchema = mongoose.Schema({
 //user model
 const userModel = mongoose.model("user", userSchema);
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 app.get("/", (req, res) => {
   res.send("Server is running");
@@ -103,6 +105,7 @@ const SchemaProduct = mongoose.Schema({
 
 const productModel = mongoose.model("product", SchemaProduct);
 
+
 //save product in data
 app.post("/uploadProduct", async (req, res) => {
   console.log(req.body);
@@ -117,6 +120,9 @@ app.get("/product", async (req, res) => {
   res.json(JSON.stringify(data));
 });
 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log("Server is running at port :" + port));
