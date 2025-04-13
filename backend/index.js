@@ -13,18 +13,12 @@ app.use(cors({
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
-
-
 app.use(express.json());
-
-
 //mongodb connection
 mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("connect to mongodb 👍"))
   .catch((err) => console.log(err));
-
-
 //schema
 const userSchema = mongoose.Schema({
   firstName: String,
@@ -38,27 +32,15 @@ const userSchema = mongoose.Schema({
   image: String,
 });
 
-
 //user model
 const userModel = mongoose.model("user", userSchema);
-
-
-
-
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
-
-
-
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
-
-
-
 
 app.post("/signup", async (req, res) => {
   try {
@@ -77,9 +59,6 @@ app.post("/signup", async (req, res) => {
     res.status(500).send({ message: "Internal server error" });
   }
 });
-
-
-
 
 //login api
 app.post("/login", async (req, res) => {
@@ -113,9 +92,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-
-
-
 //product section
 const SchemaProduct = mongoose.Schema({
   name: String,
@@ -126,7 +102,6 @@ const SchemaProduct = mongoose.Schema({
 });
 
 const productModel = mongoose.model("product", SchemaProduct);
-
 
 //save product in data
 app.post("/uploadProduct", async (req, res) => {
