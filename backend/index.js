@@ -9,8 +9,9 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: "https://ecommerse-website-8xfg.vercel.app/", // your Vercel domain here
-  credentials: true, // if using cookies/auth
+  origin: 'https://ecommerse-website-8xfg.vercel.app',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
 }));
 
 app.use(express.json());
@@ -34,17 +35,13 @@ const userSchema = mongoose.Schema({
 //user model
 const userModel = mongoose.model("user", userSchema);
 
-// __dirname workaround for ES module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Serve static frontend
-const buildPath = path.join(__dirname, '../frontend/build');
-app.use(express.static(buildPath));
+app.use(express.static(path.join(__dirname, 'frontend/build')));
 
-// Fallback to React's index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(buildPath, 'index.html'));
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
 });
 
 app.get("/", (req, res) => {

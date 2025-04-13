@@ -10,17 +10,12 @@ function App() {
   const productData = useSelector((state) => state.product);
   useEffect(() => {
     (async () => {
-      try {
-        const res = await fetch(`https://${process.env.REACT_APP_SERVER_DOMAIN}/product`);
-        const resData = await res.json();
-        console.log(resData);
-        dispatch(setDataProduct(resData));
-      } catch (err) {
-        console.error("Failed to fetch products:", err);
-      }
+      const res = await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/product`);
+      const resData = await res.json();
+      console.log(resData);
+      dispatch(setDataProduct(resData));
     })();
   }, [dispatch]);
-  
 
   console.log(productData);
   return (
