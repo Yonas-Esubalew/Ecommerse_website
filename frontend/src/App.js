@@ -12,7 +12,7 @@ function App() {
  useEffect(() => {
     (async () => {
       try {
-        const res = await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/product`);
+        const res = await fetch(`https://ecommersewebsite-production.up.railway.app/product`);
         if (!res.ok) {
           throw new Error(`Fetch failed: ${res.status}`);
         }
@@ -23,6 +23,7 @@ function App() {
       } catch (err) {
         console.error("❌ Failed to fetch product data:", err.message);
       }
+      
     })();
   }, [dispatch]);
   
