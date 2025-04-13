@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 function App() {
   const dispatch = useDispatch();
   const productData = useSelector((state) => state.product);
+  console.log("Response Data From Store", productData)
  useEffect(() => {
     (async () => {
       try {
@@ -18,17 +19,14 @@ function App() {
         }
   
         const resData = await res.json();
-        console.log(resData);
+        console.log("Response Data from Server", resData);
         dispatch(setDataProduct(resData));
       } catch (err) {
         console.error("❌ Failed to fetch product data:", err.message);
       }
-      
+
     })();
   }, [dispatch]);
-  
-  
-  console.log(productData);
   return (
     <>
       <Toaster />
