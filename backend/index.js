@@ -43,13 +43,21 @@ const userSchema = mongoose.Schema({
 const userModel = mongoose.model("user", userSchema);
 
 
+
+
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+
+
 
 
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
+
+
 
 
 app.post("/signup", async (req, res) => {
@@ -69,6 +77,8 @@ app.post("/signup", async (req, res) => {
     res.status(500).send({ message: "Internal server error" });
   }
 });
+
+
 
 
 //login api
@@ -104,6 +114,8 @@ app.post("/login", async (req, res) => {
 });
 
 
+
+
 //product section
 const SchemaProduct = mongoose.Schema({
   name: String,
@@ -114,20 +126,21 @@ const SchemaProduct = mongoose.Schema({
 });
 
 const productModel = mongoose.model("product", SchemaProduct);
+
+
 //save product in data
 app.post("/uploadProduct", async (req, res) => {
   console.log(req.body);
   const data = await productModel(req.body);
   const datasave = await data.save();
-  res.send({ message: "Upload Successfully" });
+  res.json({ message: "Upload Successfully" });
 });
+
 
 app.get("/product", async (req, res) => {
   const data = await productModel.find({});
-  res.send(JSON.stringify(data));
+  res.json(JSON.stringify(data));
 });
-
-
 
 
 const port = process.env.PORT || 8080;
