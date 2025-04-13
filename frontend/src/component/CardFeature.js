@@ -31,7 +31,7 @@ export const CardFeature = ({
             onClick={() => window.scrollTo({ top: "0", behavior: "smooth" })}
           >
             <div className="h-28 flex flex-col justify-center items-center overflow-hidden">
-              <img src={`data:image/webp;base64,${image}`} alt={name} className="h-full" />
+              <img src={image} alt={name} className="h-full" />
             </div>
             <h3 className="font-semibold text-slate-600 capitalize text-lg my-4 whitespace-nowrap overflow-hidden">
               {name}
