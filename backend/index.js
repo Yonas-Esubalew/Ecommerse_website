@@ -14,12 +14,17 @@ app.use(cors({
   allowedHeaders: ['Content-Type'],
 }));
 
+
 app.use(express.json());
+
+
 //mongodb connection
 mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("connect to mongodb 👍"))
   .catch((err) => console.log(err));
+
+
 //schema
 const userSchema = mongoose.Schema({
   firstName: String,
@@ -32,19 +37,26 @@ const userSchema = mongoose.Schema({
   confirmPassword: String,
   image: String,
 });
+
+
 //user model
 const userModel = mongoose.model("user", userSchema);
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
-// });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
+
 
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
+
+
 app.post("/signup", async (req, res) => {
   try {
     const { email } = req.body;
@@ -62,6 +74,8 @@ app.post("/signup", async (req, res) => {
     res.status(500).send({ message: "Internal server error" });
   }
 });
+
+
 //login api
 app.post("/login", async (req, res) => {
   try {
@@ -93,6 +107,8 @@ app.post("/login", async (req, res) => {
     res.status(500).send({ message: "Internal server error" });
   }
 });
+
+
 //product section
 const SchemaProduct = mongoose.Schema({
   name: String,
@@ -101,6 +117,9 @@ const SchemaProduct = mongoose.Schema({
   price: String,
   description: String,
 });
+
+
+
 const productModel = mongoose.model("product", SchemaProduct);
 //save product in data
 app.post("/uploadProduct", async (req, res) => {
@@ -109,10 +128,14 @@ app.post("/uploadProduct", async (req, res) => {
   const datasave = await data.save();
   res.send({ message: "Upload Successfully" });
 });
+
 app.get("/product", async (req, res) => {
   const data = await productModel.find({});
   res.send(JSON.stringify(data));
 });
+
+
+
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log("Server is running at port :" + port));
